@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
       content="Vilde's cybersecurity blog and project portfolio."
     />
+
     <title>Vilde | Cybersecurity Student</title>
 
     <link
@@ -19,7 +22,7 @@
 
   <body>
     <header class="site-header">
-      <a class="corner-logo" href="index.html" aria-label="Home">◉</a>
+      <a class="corner-logo" href="index.html" aria-label="Home"> ◉ </a>
 
       <button
         class="theme-button"
@@ -32,6 +35,7 @@
     </header>
 
     <main class="page-shell">
+      <!-- PROFILE HEADER -->
       <section class="profile-hero">
         <div class="cover">
           <img
@@ -50,14 +54,14 @@
             alt="Portrait of Vilde"
           />
 
-          <a class="follow-button" href="#">Follow</a>
+          <a class="follow-button" href="#"> Follow </a>
         </div>
 
         <div class="profile-copy">
           <h1>Vilde Numme</h1>
 
           <p class="tagline">
-            Cybersecurity student • Horror enthusiast • Bookworm🕯️
+            Cybersecurity student • Horror enthusiast • Bookworm 🕯️
           </p>
 
           <p class="bio">
@@ -69,16 +73,16 @@
             <li>💻 Open to opportunities</li>
 
             <li>
-              <button class="links-trigger" type="button">
-                🔗 /links
-              </button>
+              <button class="links-trigger" type="button">🔗 /links</button>
             </li>
 
-            <li>🎂 December 2</li>
-            <li>📅 Joined 2026</li>
+            <li>🎂 September 16</li>
+
+            <li>📅 Joined 2025</li>
           </ul>
         </div>
 
+        <!-- NEWSLETTER -->
         <form class="newsletter" action="#" method="post">
           <label for="email">
             Keep up to date with my latest projects and posts!
@@ -95,14 +99,11 @@
             <button type="submit">Subscribe!</button>
           </div>
 
-          <small>No spam. Unsubscribe any time.</small>
+          <small> No spam. Unsubscribe any time. </small>
         </form>
 
-        <nav
-          class="tabs"
-          role="tablist"
-          aria-label="Profile sections"
-        >
+        <!-- NAVIGATION -->
+        <nav class="tabs" role="tablist" aria-label="Profile sections">
           <a
             class="active"
             href="#feed"
@@ -122,48 +123,29 @@
             Projects
           </a>
 
-          <a
-            href="#about"
-            data-tab="about"
-            role="tab"
-            aria-selected="false"
-          >
+          <a href="#about" data-tab="about" role="tab" aria-selected="false">
             About
           </a>
 
-          <a
-            href="#now"
-            data-tab="now"
-            role="tab"
-            aria-selected="false"
-          >
+          <a href="#now" data-tab="now" role="tab" aria-selected="false">
             Now
           </a>
         </nav>
       </section>
 
-      <section
-        class="feed tab-panel active"
-        id="feed"
-        role="tabpanel"
-      >
+      <!-- FEED -->
+      <section class="feed tab-panel active" id="feed" role="tabpanel">
         <div class="feed-header">
           <div>
-            <span class="eyebrow">Latest posts</span>
+            <span class="eyebrow"> Latest posts </span>
+
             <h2>Feed</h2>
           </div>
         </div>
 
-        <div
-          class="timeline"
-          id="post-feed"
-          aria-live="polite"
-        ></div>
+        <div class="timeline" id="post-feed" aria-live="polite"></div>
 
-        <nav
-          class="page-navigation"
-          aria-label="Blog pagination"
-        >
+        <nav class="page-navigation" aria-label="Blog pagination">
           <a
             class="page-arrow page-previous"
             href="#"
@@ -172,46 +154,36 @@
             ‹
           </a>
 
-          <span class="page-status">Page 1 of 1</span>
+          <span class="page-status"> Page 1 of 1 </span>
 
-          <a
-            class="page-arrow page-next"
-            href="#"
-            aria-label="Next page"
-          >
+          <a class="page-arrow page-next" href="#" aria-label="Next page">
             ›
           </a>
         </nav>
       </section>
 
-      <section
-        class="content-section tab-panel"
-        id="projects"
-        role="tabpanel"
-      >
-        <header class="section-intro">
-          <span class="eyebrow">Things I've made</span>
+      <!-- PROJECTS -->
+      <section class="content-section tab-panel" id="projects" role="tabpanel">
+        <div class="feed-header">
+          <div>
+            <span class="eyebrow"> Things I've made </span>
 
-          <h2>Projects</h2>
+            <h2>Projects</h2>
+          </div>
+        </div>
 
-          <p>
-            A collection of coursework, experiments and write-ups.
-            Keep each project focused on what you made, why you made it
-            and what you learned.
-          </p>
-        </header>
+        <p class="section-description">
+          A mix of personal side-projects and stuff I'm learning at university.
+        </p>
 
         <div class="project-grid">
-          <a
-            class="project-card"
-            href="posts/static-malware-analysis.html"
-          >
+          <a class="project-card" href="posts/static-malware-analysis.html">
             <div>
               <h3>Static Malware Analysis</h3>
 
               <p>
-                Examining a suspicious PE file using hashes, strings,
-                headers, imports and sections.
+                Examining a suspicious PE file using hashes, strings, headers,
+                imports and sections.
               </p>
 
               <div class="project-tags">
@@ -221,19 +193,16 @@
               </div>
             </div>
 
-            <span class="project-card-arrow">↗</span>
+            <span class="project-card-arrow" aria-hidden="true"> ↗ </span>
           </a>
 
-          <a
-            class="project-card"
-            href="posts/wireshark-traffic.html"
-          >
+          <a class="project-card" href="posts/wireshark-traffic.html">
             <div>
               <h3>Wireshark Traffic Analysis</h3>
 
               <p>
-                Comparing ordinary network behaviour with patterns
-                that deserve further investigation.
+                Comparing ordinary network behaviour with traffic patterns that
+                deserve further investigation.
               </p>
 
               <div class="project-tags">
@@ -243,19 +212,16 @@
               </div>
             </div>
 
-            <span class="project-card-arrow">↗</span>
+            <span class="project-card-arrow" aria-hidden="true"> ↗ </span>
           </a>
 
-          <a
-            class="project-card"
-            href="posts/phishing-lab.html"
-          >
+          <a class="project-card" href="posts/phishing-lab.html">
             <div>
-              <h3>Phishing & SMTP Lab</h3>
+              <h3>Phishing &amp; SMTP Lab</h3>
 
               <p>
-                A controlled lab for studying spoofed email,
-                message headers and SMTP traffic.
+                A controlled lab for studying spoofed email, message headers and
+                SMTP traffic.
               </p>
 
               <div class="project-tags">
@@ -265,145 +231,156 @@
               </div>
             </div>
 
-            <span class="project-card-arrow">↗</span>
+            <span class="project-card-arrow" aria-hidden="true"> ↗ </span>
           </a>
         </div>
       </section>
 
-      <section
-        class="content-section tab-panel"
-        id="about"
-        role="tabpanel"
-      >
-        <header class="section-intro">
-          <span class="eyebrow">A little more context</span>
+      <!-- ABOUT -->
+      <section class="content-section tab-panel" id="about" role="tabpanel">
+        <div class="feed-header">
+          <div>
+            <span class="eyebrow"> A little more context </span>
 
-          <h2>About</h2>
+            <h2>About</h2>
+          </div>
+        </div>
 
-          <p>
-            This section can be more personal than your résumé.
-            Explain where you come from, what interests you and what
-            kind of work you hope to grow into.
-          </p>
-        </header>
+        <p class="section-description">
+          A little more personal than my LinkedIn profile.
+        </p>
 
         <div class="about-layout">
           <article class="about-card">
             <h3>Hi, I'm Vilde.</h3>
 
             <p>
-              I'm a cybersecurity student from Norway with a background
-              in IT support. I'm still exploring different areas of
-              security, but I keep coming back to analysis, digital
-              forensics and understanding how things work beneath
-              the surface.
+              I'm pretty sure my path into cybersecurity was written in the
+              stars back when I spent half my youth at LAN parties, building
+              computers and ignoring bedtimes to play games. What started as a
+              genuine passion eventually turned into a full-time career in IT.
             </p>
 
             <p>
-              I created this site to document projects, collect notes
-              and share the things I learn along the way—preferably
-              with more detail than strictly necessary.
+              Outside of tech, my life revolves around a few simple pleasures:
+              Good books (ranging from terrifying monsters to hopelessly
+              romantic main characters), video games, and spending a completely
+              reasonable amount of time at home.
             </p>
 
             <p>
-              Away from the terminal, I like horror films, vintage
-              aesthetics, books and spending a completely reasonable
-              amount of time at home.
+              I love stories in general, which is why I have a lot of tattoos.
+              They've turned my body into a living storybook, and I like to
+              think of them as a visual timeline of everything I've loved
+              throughout my life.
+            </p>
+
+            <p>
+              I live for autumn. The second the leaves change, the candles are
+              lit and the horror marathons begins. I firmly believe Halloween
+              deserves at least three months of celebration.
             </p>
           </article>
 
           <aside class="about-card">
-            <h3>Currently interested in</h3>
+            <h3>A few of my favorite things</h3>
 
             <div class="about-chips">
-              <span class="about-chip">Digital forensics</span>
-              <span class="about-chip">Threat intelligence</span>
-              <span class="about-chip">Malware analysis</span>
-              <span class="about-chip">Linux</span>
-              <span class="about-chip">Python</span>
-              <span class="about-chip">Documentation</span>
+              <span class="about-chip"> LoL </span>
+
+              <span class="about-chip"> Pan-flute </span>
+
+              <span class="about-chip"> The sound of rain </span>
+
+              <span class="about-chip"> Mint Chocolate </span>
+
+              <span class="about-chip"> Hannibal </span>
+
+              <span class="about-chip"> RGB-lights </span>
+
+              <span class="about-chip"> Fluffy-socks </span>
+
+              <span class="about-chip"> Vintage horror drawings </span>
+
+              <span class="about-chip"> 80s music </span>
+
+              <span class="about-chip"> LOTR </span>
             </div>
           </aside>
         </div>
       </section>
 
-      <section
-        class="content-section tab-panel"
-        id="now"
-        role="tabpanel"
-      >
-        <header class="section-intro">
-          <span class="eyebrow">What I'm doing lately</span>
+      <!-- NOW -->
+      <section class="content-section tab-panel" id="now" role="tabpanel">
+        <div class="feed-header">
+          <div>
+            <span class="eyebrow"> What I'm doing lately </span>
 
-          <h2>Now</h2>
+            <h2>Now</h2>
+          </div>
+        </div>
 
-          <p>
-            A simple snapshot of what you are currently learning,
-            building, reading and watching. Update it whenever something
-            meaningful changes.
-          </p>
-        </header>
+        <p class="section-description">
+          A small snapshot of what I'm currently learning, building, reading and
+          watching.
+        </p>
 
         <div class="now-grid">
           <article class="now-card">
-            <span class="now-label">Learning</span>
+            <span class="now-label"> Learning </span>
 
-            <h3>Cybersecurity foundations</h3>
+            <h3>HTML, CSS & JS</h3>
 
             <p>
-              Malware analysis, networking, Python automation and
-              digital forensics basics.
+              Building this from scratch lets me finally put last year's HTML,
+              CSS, and JS classes to good use.
             </p>
           </article>
 
           <article class="now-card">
-            <span class="now-label">Building</span>
+            <span class="now-label"> Building </span>
 
             <h3>This website</h3>
 
             <p>
-              Turning a GitHub Pages site into a personal blog,
-              project archive and online profile.
+              Being a student meant my old blog had to go to save costs, but I
+              missed having a place to write. Building this site has been so
+              much fun, super rewarding, and a great learning curve.
             </p>
           </article>
 
           <article class="now-card">
-            <span class="now-label">Reading</span>
+            <span class="now-label"> Reading </span>
 
-            <h3>Add your current book here</h3>
+            <h3>IT - Stephen King</h3>
 
             <p>
-              Write one sentence about the book, or use this card
-              for a favourite quote.
+              Wow! Can't believe I haven't read this sooner! Stephen King just
+              has a unique way of building atmosphere. Nobody creates that slow,
+              creeping feeling of horror quite like him.
             </p>
           </article>
 
           <article class="now-card">
-            <span class="now-label">Watching</span>
+            <span class="now-label"> Watching </span>
 
-            <h3>Add your latest film or series</h3>
+            <h3>Project Hail Mary</h3>
 
             <p>
-              This is where the horror personality can show up without
-              changing the design of the entire site.
+              I’m usually not into sci-fi at all, so this completely took me by
+              surprise. 10/10 would absolutely panic in space.
             </p>
           </article>
         </div>
 
-        <p class="now-updated">
-          Last updated: August 2026
-        </p>
+        <p class="now-updated">Last updated: 04. August 2026</p>
       </section>
     </main>
 
-    <footer class="site-footer">
-      © 2026 Vilde.
-    </footer>
+    <footer class="site-footer">© 2026 Vilde.</footer>
 
-    <div
-      class="links-modal"
-      aria-hidden="true"
-    >
+    <!-- LINKS MODAL -->
+    <div class="links-modal" aria-hidden="true">
       <div class="links-modal-backdrop"></div>
 
       <section
@@ -414,7 +391,8 @@
       >
         <div class="links-modal-header">
           <div>
-            <span class="eyebrow">Find me online</span>
+            <span class="eyebrow"> Find me online </span>
+
             <h2 id="links-modal-title">Links</h2>
           </div>
 
@@ -436,10 +414,11 @@
           >
             <span>
               <strong>GitHub</strong>
-              <small>Projects, code and experiments</small>
+
+              <small> Projects, code and experiments </small>
             </span>
 
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"> ↗ </span>
           </a>
 
           <a
@@ -450,34 +429,31 @@
           >
             <span>
               <strong>LinkedIn</strong>
-              <small>Cybersecurity, studies and work</small>
+
+              <small> Cybersecurity, studies and work </small>
             </span>
 
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"> ↗ </span>
           </a>
 
-          <a
-            class="links-item"
-            href="mailto:your-email@example.com"
-          >
+          <a class="links-item" href="mailto:your-email@example.com">
             <span>
               <strong>Email</strong>
-              <small>Get in touch</small>
+
+              <small> Get in touch </small>
             </span>
 
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"> ↗ </span>
           </a>
 
-          <a
-            class="links-item links-blog-link"
-            href="#feed"
-          >
+          <a class="links-item links-blog-link" href="#feed">
             <span>
               <strong>Blog</strong>
-              <small>Notes, projects and write-ups</small>
+
+              <small> Notes, projects and write-ups </small>
             </span>
 
-            <span aria-hidden="true">↓</span>
+            <span aria-hidden="true"> ↓ </span>
           </a>
         </div>
       </section>

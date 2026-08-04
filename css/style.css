@@ -1173,15 +1173,9 @@ Pagination rule:
     transform 0.15s ease;
 }
 
-.follow-button.active {
-  background: var(--accent);
-  color: white;
-}
-
 .follow-button:active {
   transform: scale(0.97);
 }
-
 
 /* ---------------------------------
    Functional profile tabs
@@ -1220,30 +1214,6 @@ Pagination rule:
   width: min(760px, 100%);
   margin: 0 auto;
   padding: 54px 24px 80px;
-}
-
-.section-intro {
-  margin-bottom: 30px;
-}
-
-.section-intro .eyebrow {
-  display: block;
-  margin-bottom: 14px;
-}
-
-.section-intro h2 {
-  margin: 0 0 12px;
-  font-size: clamp(2.2rem, 6vw, 3.8rem);
-  line-height: 1;
-  letter-spacing: -0.045em;
-}
-
-.section-intro p {
-  max-width: 650px;
-  margin: 0;
-  color: var(--body-text);
-  font-size: 1.04rem;
-  line-height: 1.65;
 }
 
 .project-grid {
@@ -1375,13 +1345,6 @@ Pagination rule:
   border-bottom: 1px solid var(--line);
 }
 
-/* Make visual follow state slightly distinct */
-.follow-button.active {
-  background: var(--surface-soft);
-  color: var(--accent);
-  border: 1px solid var(--accent);
-}
-
 @media (max-width: 760px) {
   .content-section {
     padding-right: 18px;
@@ -1401,5 +1364,28 @@ Pagination rule:
 
   .project-card-arrow {
     display: none;
+  }
+}
+
+.section-description {
+  max-width: 680px;
+  margin: 18px 0 36px;
+  color: var(--body-text);
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.feed,
+.content-section {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 42px 24px 80px;
+}
+
+@media (max-width: 760px) {
+  .feed,
+  .content-section {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
