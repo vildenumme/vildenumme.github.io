@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Notes from mistakes, fixes, and terminal experiments." />
+  <title>Things I Learned from Breaking Linux | Vilde</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="corner-logo" href="../index.html" aria-label="Home">◉</a>
+    <button class="theme-button" type="button" aria-label="Switch theme" title="Switch theme"><span>☀</span></button>
+  </header>
+
+  <main class="article-shell">
+    <article class="article-card">
+      <div class="article-cover">
+        <img src="../images/setup-cover.jpg" alt="Purple-lit desk setup" />
+      </div>
+
+      <div class="article-content">
+        <a class="back-link" href="../index.html#feed">← Back to feed</a>
+
+        <div class="article-author">
+          <img src="../images/profile.jpg" alt="" />
+          <div><strong>Vilde</strong><br><span>@vildenumme · Jul 8, 2026</span></div>
+        </div>
+
+        <h1>Things I Learned from Breaking Linux</h1>
+        <p class="article-deck">Notes from mistakes, fixes, and terminal experiments.</p>
+
+        <div class="article-meta">
+          <span>Jul 8, 2026</span>
+          <span>5 min read</span>
+          <span>Linux</span>
+        </div>
+
+        <div class="article-body">
+          
+          <p>Breaking something is often the fastest way to understand how it works. Most of my Linux problems were not dramatic—they were small configuration mistakes, missing packages, permissions, and commands used before I fully understood them.</p>
+
+          <h2>Read the error before searching</h2>
+          <p>It sounds obvious, but slowing down and reading the full error message often reveals the actual problem. Searching only the final line can hide the context that matters.</p>
+
+          <div class="code-block">
+            <button class="copy-code" type="button">Copy</button>
+            <pre><code>$ whoami
+vilde
+
+$ uname -a
+Linux lab-machine 6.x</code></pre>
+          </div>
+
+          <h2>Permissions are usually trying to tell you something</h2>
+          <p>Using elevated privileges can make a problem disappear while creating a different one. Understanding file ownership and permissions is more useful than automatically adding <code>sudo</code>.</p>
+
+          <h2>Document the fix</h2>
+          <p>Writing down both the mistake and the solution makes the lesson easier to remember. It also turns a frustrating problem into something useful for a future project or write-up.</p>
+        
+        </div>
+
+        <div class="article-tags"><span>Linux</span><span>Learning</span><span>Documentation</span></div>
+
+        <div class="article-actions">
+          <button class="action-button share-page" type="button">Share article</button>
+          <a class="action-button" href="../index.html#feed">Back to feed</a>
+        </div>
+
+        <nav class="article-pagination">
+          <a href="wireshark-traffic.html"><small>Previous article</small>Wireshark: Normal vs. Suspicious Traffic</a>
+          <span></span>
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img src="" alt="" />
+  </div>
+
+  <footer class="site-footer">© 2026 Vilde.</footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
