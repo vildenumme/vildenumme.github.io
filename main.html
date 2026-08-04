@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vilde's cybersecurity blog and project portfolio."
+    />
+    <title>Vilde | Cybersecurity Student</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="corner-logo" href="#" aria-label="Home">◉</a>
+      <button
+        class="theme-button"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Switch to dark mode"
+      >
+        <span aria-hidden="true">☀</span>
+      </button>
+    </header>
+
+    <main class="page-shell">
+      <section class="profile-hero">
+        <div class="cover">
+          <img class="cover-image" src="img/setup.png" alt="" />
+          <div class="cover-overlay"></div>
+        </div>
+
+        <div class="profile-top">
+          <img
+            class="avatar"
+            src="img/profilbilde.jpg"
+            alt="Portrait of Vilde"
+          />
+
+          <a
+            class="follow-button"
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Follow <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="profile-copy">
+          <h1>Vilde Numme <span class="verified"></span></h1>
+          <p class="tagline">
+            Cybersecurity student • Horror enthusiast • Bookworm 🕸️
+          </p>
+          <p class="bio">
+            Documenting projects with the enthusiasm of someone making an FBI
+            evidence board.
+          </p>
+
+          <ul class="profile-meta" aria-label="Profile details">
+            <li>💻 Open to opportunities</li>
+            <li><a href="#links">🔗 /links</a></li>
+            <li>🎂 December 2</li>
+            <li>📅 Joined 2026</li>
+          </ul>
+        </div>
+
+        <form class="newsletter" action="#" method="post">
+          <label for="email"
+            >Keep up to date with my latest projects and posts!</label
+          >
+          <div class="newsletter-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email address"
+            />
+            <button type="submit">Subscribe!</button>
+          </div>
+          <small>No spam. Unsubscribe any time.</small>
+        </form>
+
+        <nav class="tabs" aria-label="Profile sections">
+          <a class="active" href="#feed">Feed</a>
+          <a href="#about">About</a>
+          <a href="#content">Content</a>
+          <a href="#guestbook">Guestbook</a>
+        </nav>
+      </section>
+
+      <section class="feed" id="feed">
+        <div class="feed-header">
+          <div>
+            <span class="eyebrow">Latest writing</span>
+            <h2>Feed</h2>
+          </div>
+          <button class="feed-filter" type="button">Latest</button>
+        </div>
+
+        <div class="timeline">
+          <article class="feed-post">
+            <img class="post-avatar" src="images/profile.jpg" alt="" />
+            <div class="feed-post-content">
+              <div class="feed-post-top">
+                <div>
+                  <strong>Vilde</strong>
+                  <span>@vildenumme · Aug 3</span>
+                </div>
+                <button
+                  class="more-button"
+                  type="button"
+                  aria-label="More options"
+                >
+                  •••
+                </button>
+              </div>
+
+              <p class="feed-text">
+                I just finished a beginner-friendly walkthrough of static
+                malware analysis. I looked at hashes, strings, PE headers,
+                imports, sections, and a few suspicious indicators.
+              </p>
+
+              <a class="feed-preview" href="#">
+                <div class="feed-preview-image preview-malware">
+                  <span>4D 5A 90 00<br />50 45 00 00<br />malware.exe</span>
+                </div>
+                <div class="feed-preview-copy">
+                  <span class="preview-domain">vildenumme.github.io</span>
+                  <h3>Static Malware Analysis: A Beginner Walkthrough</h3>
+                  <p>
+                    A practical introduction to examining a suspicious file
+                    without running it.
+                  </p>
+                </div>
+              </a>
+
+              <div class="post-actions">
+                <button type="button">♡ <span>12</span></button>
+                <button type="button">↻ <span>3</span></button>
+                <button type="button">↗ <span>Share</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-post">
+            <img class="post-avatar" src="images/profile.jpg" alt="" />
+            <div class="feed-post-content">
+              <div class="feed-post-top">
+                <div>
+                  <strong>Vilde</strong>
+                  <span>@vildenumme · Jul 21</span>
+                </div>
+                <button
+                  class="more-button"
+                  type="button"
+                  aria-label="More options"
+                >
+                  •••
+                </button>
+              </div>
+
+              <p class="feed-text">
+                New post: a simple comparison of normal and suspicious network
+                traffic in Wireshark. Mostly notes from what I have been
+                learning lately.
+              </p>
+
+              <a class="feed-preview" href="#">
+                <div class="feed-preview-image preview-network">
+                  <span>TCP 443<br />192.168.1.10<br />ESTABLISHED</span>
+                </div>
+                <div class="feed-preview-copy">
+                  <span class="preview-domain">vildenumme.github.io</span>
+                  <h3>Wireshark: Normal vs. Suspicious Traffic</h3>
+                  <p>
+                    Traffic patterns, red flags, and what deserves a closer
+                    look.
+                  </p>
+                </div>
+              </a>
+
+              <div class="post-actions">
+                <button type="button">♡ <span>18</span></button>
+                <button type="button">↻ <span>5</span></button>
+                <button type="button">↗ <span>Share</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-post">
+            <img class="post-avatar" src="images/profile.jpg" alt="" />
+            <div class="feed-post-content">
+              <div class="feed-post-top">
+                <div>
+                  <strong>Vilde</strong>
+                  <span>@vildenumme · Jul 8</span>
+                </div>
+                <button
+                  class="more-button"
+                  type="button"
+                  aria-label="More options"
+                >
+                  •••
+                </button>
+              </div>
+
+              <p class="feed-text">
+                Linux lesson of the week: breaking something is often the
+                fastest way to understand how it works.
+              </p>
+
+              <a class="feed-preview" href="#">
+                <div class="feed-preview-image preview-linux">
+                  <span>$ whoami<br />vilde<br />$ uname -a</span>
+                </div>
+                <div class="feed-preview-copy">
+                  <span class="preview-domain">vildenumme.github.io</span>
+                  <h3>Things I Learned from Breaking Linux</h3>
+                  <p>Notes from mistakes, fixes, and terminal experiments.</p>
+                </div>
+              </a>
+
+              <div class="post-actions">
+                <button type="button">♡ <span>9</span></button>
+                <button type="button">↻ <span>2</span></button>
+                <button type="button">↗ <span>Share</span></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Vilde.</p>
+    </footer>
+
+    <script>
+      const themeButton = document.querySelector(".theme-button");
+      const themeIcon = themeButton.querySelector("span");
+      const root = document.documentElement;
+
+      function applyTheme(theme) {
+        const isDark = theme === "dark";
+
+        root.dataset.theme = theme;
+        themeIcon.textContent = isDark ? "☾" : "☀";
+        themeButton.setAttribute(
+          "aria-label",
+          isDark ? "Switch to light mode" : "Switch to dark mode",
+        );
+        themeButton.setAttribute(
+          "title",
+          isDark ? "Switch to light mode" : "Switch to dark mode",
+        );
+      }
+
+      const savedTheme = localStorage.getItem("vilde-theme");
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+
+      applyTheme(savedTheme || preferredTheme);
+
+      themeButton.addEventListener("click", () => {
+        const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+        applyTheme(nextTheme);
+        localStorage.setItem("vilde-theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
