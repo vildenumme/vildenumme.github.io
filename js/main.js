@@ -9,13 +9,22 @@ function applyTheme(theme) {
 
   if (themeButton && themeIcon) {
     themeIcon.textContent = isDark ? "☾" : "☀";
-    themeButton.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-    themeButton.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+    themeButton.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode",
+    );
+    themeButton.setAttribute(
+      "title",
+      isDark ? "Switch to light mode" : "Switch to dark mode",
+    );
   }
 }
 
 const savedTheme = localStorage.getItem("vilde-theme");
-const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
+
 applyTheme(savedTheme || preferredTheme);
 
 themeButton?.addEventListener("click", () => {
@@ -27,11 +36,12 @@ themeButton?.addEventListener("click", () => {
 document.querySelectorAll(".copy-code").forEach((button) => {
   button.addEventListener("click", async () => {
     const code = button.parentElement.querySelector("code")?.innerText || "";
+
     try {
       await navigator.clipboard.writeText(code);
       const original = button.textContent;
       button.textContent = "Copied";
-      setTimeout(() => button.textContent = original, 1400);
+      setTimeout(() => (button.textContent = original), 1400);
     } catch {
       button.textContent = "Copy failed";
     }
@@ -43,7 +53,7 @@ document.querySelectorAll(".share-page").forEach((button) => {
     const shareData = {
       title: document.title,
       text: document.querySelector('meta[name="description"]')?.content || "",
-      url: window.location.href
+      url: window.location.href,
     };
 
     if (navigator.share) {
@@ -53,7 +63,7 @@ document.querySelectorAll(".share-page").forEach((button) => {
         await navigator.clipboard.writeText(window.location.href);
         const original = button.textContent;
         button.textContent = "Link copied";
-        setTimeout(() => button.textContent = original, 1400);
+        setTimeout(() => (button.textContent = original), 1400);
       } catch {
         button.textContent = "Copy failed";
       }
@@ -67,6 +77,7 @@ const lightboxImage = lightbox?.querySelector("img");
 document.querySelectorAll(".article-image img").forEach((image) => {
   image.addEventListener("click", () => {
     if (!lightbox || !lightboxImage) return;
+
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
     lightbox.classList.add("open");
@@ -78,14 +89,18 @@ document.querySelector(".lightbox-close")?.addEventListener("click", () => {
 });
 
 lightbox?.addEventListener("click", (event) => {
-  if (event.target === lightbox) lightbox.classList.remove("open");
+  if (event.target === lightbox) {
+    lightbox.classList.remove("open");
+  }
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") lightbox?.classList.remove("open");
+  if (event.key === "Escape") {
+    lightbox?.classList.remove("open");
+  }
 });
 
-
+/* Links modal */
 const linksTrigger = document.querySelector(".links-trigger");
 const linksModal = document.querySelector(".links-modal");
 const linksModalClose = document.querySelector(".links-modal-close");
@@ -119,6 +134,7 @@ linksModalBackdrop?.addEventListener("click", () => closeLinksModal());
 
 linksBlogLink?.addEventListener("click", () => {
   closeLinksModal({ restoreFocus: false });
+  showTab("feed");
 });
 
 document.addEventListener("keydown", (event) => {
@@ -126,3 +142,47 @@ document.addEventListener("keydown", (event) => {
     closeLinksModal();
   }
 });
+
+/* Visual Follow / Following button */
+const followButton = document.querySelector(".follow-button");
+
+followButton?.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const following = followButton.classList.toggle("active");
+  followButton.textContent = following ? "✓ Following" : "Follow";
+});
+
+/* Functional tabs */
+const tabs = document.querySelectorAll(".tabs a[data-tab]");
+const panels = document.querySelectorAll(".tab-panel");
+
+function showTab(tabName, updateHash = true) {
+  tabs.forEach((tab) => {
+    const isActive = tab.dataset.tab === tabName;
+
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
+
+  panels.forEach((panel) => {
+    panel.classList.toggle("active", panel.id === tabName);
+  });
+
+  if (updateHash) {
+    history.replaceState(null, "", `#${tabName}`);
+  }
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", (event) => {
+    event.preventDefault();
+    showTab(tab.dataset.tab);
+  });
+});
+
+const requestedTab = window.location.hash.replace("#", "");
+
+if (["feed", "projects", "about", "now"].includes(requestedTab)) {
+  showTab(requestedTab, false);
+}

@@ -3,90 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Traffic patterns, red flags, and what deserves a closer look." />
+  <meta name="description" content="Wireshark: Normal vs. Suspicious Traffic" />
   <title>Wireshark: Normal vs. Suspicious Traffic | Vilde</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="corner-logo" href="../index.html" aria-label="Home">◉</a>
-    <button class="theme-button" type="button" aria-label="Switch theme" title="Switch theme"><span>☀</span></button>
-  </header>
-
   <main class="article-shell">
     <article class="article-card">
       <div class="article-cover">
-        <img src="../images/setup-cover.jpg" alt="Purple-lit desk setup" />
+        <img src="../images/setup-cover.jpg" alt="" />
       </div>
 
       <div class="article-content">
-        <a class="back-link" href="../index.html#feed">← Back to feed</a>
-
-        <div class="article-author">
-          <img src="../images/profile.jpg" alt="" />
-          <div><strong>Vilde</strong><br><span>@vildenumme · Jul 21, 2026</span></div>
-        </div>
+        <a class="back-link" href="../index.html#feed">
+          ← Back to feed
+        </a>
 
         <h1>Wireshark: Normal vs. Suspicious Traffic</h1>
-        <p class="article-deck">Traffic patterns, red flags, and what deserves a closer look.</p>
 
-        <div class="article-meta">
-          <span>Jul 21, 2026</span>
-          <span>6 min read</span>
-          <span>Networking</span>
-        </div>
+        <p class="article-deck">
+          Replace this with the finished introduction to your article.
+        </p>
 
         <div class="article-body">
-          
-          <p>Not every unusual packet is malicious. Context, baselines, and repetition matter when deciding whether traffic deserves further investigation.</p>
-
-          <h2>Begin with a baseline</h2>
-          <p>Before looking for suspicious behaviour, it helps to understand what normal traffic looks like in the environment. Common DNS, HTTPS, DHCP, and local network traffic provide useful reference points.</p>
-
-          <div class="code-block">
-            <button class="copy-code" type="button">Copy</button>
-            <pre><code>Source:      192.168.1.10
-Destination: 142.250.74.14
-Protocol:    TCP
-Port:        443
-State:       ESTABLISHED</code></pre>
-          </div>
-
-          <h2>Patterns worth investigating</h2>
-          <ul>
-            <li>Repeated outbound connections at regular intervals.</li>
-            <li>Unexpected protocols or destination ports.</li>
-            <li>DNS requests for unusual or newly observed domains.</li>
-            <li>Large transfers that do not match expected activity.</li>
-          </ul>
-
-          <h2>Context changes everything</h2>
-          <p>An unfamiliar destination may belong to a legitimate cloud service. A repeated connection could be a normal software update check. The goal is not to label traffic immediately, but to ask better questions.</p>
-        
+          <p>
+            This is a ready-to-edit article page. Add headings,
+            paragraphs, screenshots and code blocks here.
+          </p>
         </div>
-
-        <div class="article-tags"><span>Wireshark</span><span>Networking</span><span>Traffic analysis</span></div>
-
-        <div class="article-actions">
-          <button class="action-button share-page" type="button">Share article</button>
-          <a class="action-button" href="../index.html#feed">Back to feed</a>
-        </div>
-
-        <nav class="article-pagination">
-          <a href="static-malware-analysis.html"><small>Previous article</small>Static Malware Analysis: A Beginner Walkthrough</a>
-          <a href="linux-lessons.html"><small>Next article</small>Things I Learned from Breaking Linux</a>
-        </nav>
       </div>
     </article>
   </main>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image">×</button>
-    <img src="" alt="" />
-  </div>
-
-  <footer class="site-footer">© 2026 Vilde.</footer>
   <script src="../js/main.js"></script>
 </body>
 </html>

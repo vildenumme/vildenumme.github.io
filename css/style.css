@@ -1,10 +1,10 @@
-
 * {
   box-sizing: border-box;
 }
 
 :root {
   color-scheme: light;
+  --avatar-border: #ffffff;
   --background: #ffffff;
   --surface: #ffffff;
   --surface-soft: #f6f3fa;
@@ -22,6 +22,7 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
+  --avatar-border: #1d1825;
   --background: #0c0a11;
   --surface: #17131f;
   --surface-soft: #211b2b;
@@ -47,7 +48,9 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: "Geist Variable", "Geist", Arial, sans-serif;
-  transition: background-color 220ms ease, color 220ms ease;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
 }
 
 a {
@@ -98,7 +101,10 @@ button {
   background: var(--surface);
   box-shadow: 0 5px 18px rgba(20, 22, 28, 0.08);
   cursor: pointer;
-  transition: transform 180ms ease, background-color 220ms ease, border-color 220ms ease;
+  transition:
+    transform 180ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease;
 }
 
 .theme-button:hover {
@@ -144,7 +150,11 @@ a:focus-visible {
 .cover-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 45%, var(--header-overlay));
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    var(--header-overlay)
+  );
   pointer-events: none;
 }
 
@@ -161,11 +171,12 @@ a:focus-visible {
   width: 150px;
   height: 150px;
   margin-top: -82px;
-  border: 4px solid var(--surface);
-  outline: 3px solid var(--text);
+  border: 4px solid var(--avatar-border);
   border-radius: 50%;
   object-fit: cover;
   background: var(--surface-soft);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .follow-button {
@@ -175,7 +186,9 @@ a:focus-visible {
   background: var(--accent);
   color: white;
   font-weight: 700;
-  transition: transform 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
 }
 
 .follow-button:hover {
@@ -326,8 +339,8 @@ a:focus-visible {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  padding: 0 0 18px;
-  border-bottom: 1px solid var(--line);
+  padding: 0 0 20px;
+  border-bottom: none;
 }
 
 .eyebrow {
@@ -355,9 +368,9 @@ a:focus-visible {
 
 .timeline {
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: none;
   border-radius: 18px;
-  background: var(--surface);
+  background: transparent;
 }
 
 .feed-post {
@@ -366,6 +379,9 @@ a:focus-visible {
   gap: 14px;
   padding: 24px 20px 18px;
   border-bottom: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin-bottom: 18px;
 }
 
 .feed-post:last-child {
@@ -421,7 +437,10 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--surface);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .feed-preview:hover {
@@ -442,19 +461,31 @@ a:focus-visible {
 
 .preview-malware {
   background:
-    radial-gradient(circle at 28% 24%, rgba(139, 92, 246, 0.28), transparent 38%),
+    radial-gradient(
+      circle at 28% 24%,
+      rgba(139, 92, 246, 0.28),
+      transparent 38%
+    ),
     var(--terminal);
 }
 
 .preview-network {
   background:
-    repeating-linear-gradient(90deg, transparent 0 27px, rgba(139, 92, 246, 0.12) 28px 29px),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 27px,
+      rgba(139, 92, 246, 0.12) 28px 29px
+    ),
     var(--terminal);
 }
 
 .preview-linux {
   background:
-    radial-gradient(circle at 70% 20%, rgba(111, 76, 255, 0.3), transparent 35%),
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(111, 76, 255, 0.3),
+      transparent 35%
+    ),
     var(--terminal);
 }
 
@@ -653,9 +684,9 @@ a:focus-visible {
   position: absolute;
   top: 10px;
   right: 10px;
-  border: 1px solid rgba(255,255,255,.16);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   padding: 7px 10px;
   cursor: pointer;
@@ -850,22 +881,12 @@ a:focus-visible {
   }
 }
 
-
-
-
 /*
 Pagination rule:
 - Page 1: current page + Next
 - Middle pages: Previous + current page + Next
 - Final page: Previous + current page
 */
-
-
-.feed-header {
-  display: block;
-  padding: 0 0 26px;
-  border-bottom: 1px solid var(--line);
-}
 
 .eyebrow {
   display: block;
@@ -924,7 +945,11 @@ Pagination rule:
 
 .preview-phishing {
   background:
-    radial-gradient(circle at 22% 24%, rgba(139, 92, 246, 0.3), transparent 38%),
+    radial-gradient(
+      circle at 22% 24%,
+      rgba(139, 92, 246, 0.3),
+      transparent 38%
+    ),
     var(--terminal);
 }
 
@@ -961,7 +986,6 @@ Pagination rule:
   }
 }
 
-
 .post-actions button {
   display: inline-flex;
   align-items: center;
@@ -989,14 +1013,24 @@ Pagination rule:
 }
 
 @keyframes heart-pop {
-  0% { transform: scale(0.75); }
-  65% { transform: scale(1.28); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0.75);
+  }
+  65% {
+    transform: scale(1.28);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes repost-spin {
-  from { transform: rotate(-35deg); }
-  to { transform: rotate(0); }
+  from {
+    transform: rotate(-35deg);
+  }
+  to {
+    transform: rotate(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1005,7 +1039,6 @@ Pagination rule:
     animation: none;
   }
 }
-
 
 .links-trigger {
   border: 0;
@@ -1043,12 +1076,12 @@ Pagination rule:
 .links-modal-card {
   position: relative;
   z-index: 1;
-  width: min(460px, 100%);
+  width: min(380px, 92%);
   border: 1px solid var(--line);
   border-radius: 20px;
   background: var(--surface);
   box-shadow: var(--shadow);
-  padding: 24px;
+  padding: 20px;
   animation: links-modal-in 180ms ease;
 }
 
@@ -1081,7 +1114,7 @@ Pagination rule:
 
 .links-list {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .links-item {
@@ -1091,7 +1124,7 @@ Pagination rule:
   gap: 18px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 15px 16px;
+  padding: 12px 14px;
   background: var(--surface);
   transition:
     transform 160ms ease,
@@ -1130,5 +1163,243 @@ Pagination rule:
 @media (prefers-reduced-motion: reduce) {
   .links-modal-card {
     animation: none;
+  }
+}
+
+.follow-button {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.follow-button.active {
+  background: var(--accent);
+  color: white;
+}
+
+.follow-button:active {
+  transform: scale(0.97);
+}
+
+
+/* ---------------------------------
+   Functional profile tabs
+---------------------------------- */
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: tab-panel-in 180ms ease;
+}
+
+@keyframes tab-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tabs a {
+  cursor: pointer;
+}
+
+/* ---------------------------------
+   Projects, About and Now sections
+---------------------------------- */
+
+.content-section {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 54px 24px 80px;
+}
+
+.section-intro {
+  margin-bottom: 30px;
+}
+
+.section-intro .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.section-intro h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.section-intro p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--body-text);
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.project-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 22px;
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    background-color 170ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--surface-soft);
+}
+
+.project-card h3 {
+  margin: 0 0 7px;
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.project-card-arrow {
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.project-tags span,
+.about-chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  padding: 6px 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.75fr);
+  gap: 22px;
+}
+
+.about-card,
+.now-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 24px;
+}
+
+.about-card h3,
+.now-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.18rem;
+}
+
+.about-card p {
+  margin: 0 0 15px;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.now-label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.now-card p {
+  margin: 0;
+  color: var(--body-text);
+  line-height: 1.6;
+}
+
+.now-updated {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+/* Prevent the final feed card from keeping an unwanted bottom border */
+.feed-post:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Make visual follow state slightly distinct */
+.follow-button.active {
+  background: var(--surface-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+@media (max-width: 760px) {
+  .content-section {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .about-layout,
+  .now-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-arrow {
+    display: none;
   }
 }

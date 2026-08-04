@@ -1,163 +1,490 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vilde's cybersecurity blog and project portfolio." />
-  <title>Vilde | Cybersecurity Student</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <a class="corner-logo" href="index.html" aria-label="Home">◉</a>
-    <button class="theme-button" type="button" aria-label="Switch theme" title="Switch theme"><span>☀</span></button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vilde's cybersecurity blog and project portfolio."
+    />
+    <title>Vilde | Cybersecurity Student</title>
 
-  <main class="page-shell">
-    <section class="profile-hero">
-      <div class="cover">
-        <img class="cover-image" src="images/setup-cover.jpg" alt="Purple-lit desk setup with monitors, PC and horror decor" />
-        <div class="cover-overlay" aria-hidden="true"></div>
-      </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css"
+    />
 
-      <div class="profile-top">
-        <img class="avatar" src="images/profile.jpg" alt="Portrait of Vilde" />
-        <a class="follow-button" href="https://github.com/vildenumme" target="_blank" rel="noreferrer">Follow ♥</a>
-      </div>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-      <div class="profile-copy">
-        <h1>Vilde 
-<span class="verified" aria-label="Verified" title="Verified">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M22.25 12c0-1.43-1.09-2.61-2.48-2.76.88-1.09.8-2.7-.2-3.7-1.01-1.01-2.61-1.09-3.7-.21A2.78 2.78 0 0 0 13.1 2.56a2.78 2.78 0 0 0-2.77 2.77c-1.09-.88-2.69-.8-3.7.21-1 1-1.08 2.61-.2 3.7A2.78 2.78 0 0 0 3.65 12c0 1.43 1.09 2.61 2.78 2.76-.88 1.09-.8 2.7.2 3.7 1.01 1.01 2.61 1.09 3.7.21a2.78 2.78 0 0 0 2.77 2.77 2.78 2.78 0 0 0 2.77-2.77c1.09.88 2.69.8 3.7-.21 1-1 1.08-2.61.2-3.7A2.78 2.78 0 0 0 22.25 12Z"/>
-    <path class="verified-check" d="m9.8 15.2-2.55-2.55 1.4-1.4 1.15 1.15 4.55-4.55 1.4 1.4-5.95 5.95Z"/>
-  </svg>
-</span>
-</h1>
-        <p class="tagline">Cybersecurity student • Horror enthusiast • Bookworm • Homebody 🕯️</p>
-        <p class="bio">Documenting projects with the enthusiasm of someone building an FBI evidence board.</p>
-        <ul class="profile-meta">
-          <li>💻 Open to opportunities</li>
-          <li>
-            <button class="links-trigger" type="button">
-              🔗 /links
-            </button>
-          </li>
-          <li>🎂 December 2</li>
-          <li>📅 Joined 2026</li>
-        </ul>
-      </div>
+  <body>
+    <header class="site-header">
+      <a class="corner-logo" href="index.html" aria-label="Home">◉</a>
 
-      <form class="newsletter" action="#" method="post">
-        <label for="email">Keep up to date with my latest projects and posts!</label>
-        <div class="newsletter-row">
-          <input id="email" name="email" type="email" placeholder="Email address" />
-          <button type="submit">Subscribe!</button>
+      <button
+        class="theme-button"
+        type="button"
+        aria-label="Switch theme"
+        title="Switch theme"
+      >
+        <span>☀</span>
+      </button>
+    </header>
+
+    <main class="page-shell">
+      <section class="profile-hero">
+        <div class="cover">
+          <img
+            class="cover-image"
+            src="images/setup-cover.jpg"
+            alt="Purple-lit desk setup with monitors, PC and horror decor"
+          />
+
+          <div class="cover-overlay" aria-hidden="true"></div>
         </div>
-        <small>No spam. Unsubscribe any time.</small>
-      </form>
 
-      <nav class="tabs">
-        <a class="active" href="#feed">Feed</a>
-        <a href="#about">About</a>
-        <a href="#content">Content</a>
-        <a href="#guestbook">Guestbook</a>
-      </nav>
-    </section>
+        <div class="profile-top">
+          <img
+            class="avatar"
+            src="images/profile.jpg"
+            alt="Portrait of Vilde"
+          />
 
-    <section class="feed" id="feed">
-      <div class="feed-header">
-        <div>
-          <span class="eyebrow">Latest posts</span>
-          <h2>Feed</h2>
+          <a class="follow-button" href="#">Follow</a>
         </div>
-      </div>
 
-      <div class="timeline" id="post-feed" aria-live="polite"></div>
+        <div class="profile-copy">
+          <h1>Vilde Numme</h1>
 
-      <nav class="page-navigation" aria-label="Blog pagination">
-        <a class="page-arrow page-previous" href="#" aria-label="Previous page">‹</a>
-        <span class="page-status">Page 1 of 1</span>
-        <a class="page-arrow page-next" href="#" aria-label="Next page">›</a>
-      </nav>
-    </section>
-  </main>
+          <p class="tagline">
+            Cybersecurity student • Horror enthusiast • Bookworm🕯️
+          </p>
 
-  <footer class="site-footer">© 2026 Vilde.</footer>
+          <p class="bio">
+            Documenting projects with the enthusiasm of someone building an FBI
+            evidence board.
+          </p>
 
-  <div class="links-modal" aria-hidden="true">
-    <div class="links-modal-backdrop"></div>
+          <ul class="profile-meta">
+            <li>💻 Open to opportunities</li>
 
-    <section
-      class="links-modal-card"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="links-modal-title"
+            <li>
+              <button class="links-trigger" type="button">
+                🔗 /links
+              </button>
+            </li>
+
+            <li>🎂 December 2</li>
+            <li>📅 Joined 2026</li>
+          </ul>
+        </div>
+
+        <form class="newsletter" action="#" method="post">
+          <label for="email">
+            Keep up to date with my latest projects and posts!
+          </label>
+
+          <div class="newsletter-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email address"
+            />
+
+            <button type="submit">Subscribe!</button>
+          </div>
+
+          <small>No spam. Unsubscribe any time.</small>
+        </form>
+
+        <nav
+          class="tabs"
+          role="tablist"
+          aria-label="Profile sections"
+        >
+          <a
+            class="active"
+            href="#feed"
+            data-tab="feed"
+            role="tab"
+            aria-selected="true"
+          >
+            Feed
+          </a>
+
+          <a
+            href="#projects"
+            data-tab="projects"
+            role="tab"
+            aria-selected="false"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#about"
+            data-tab="about"
+            role="tab"
+            aria-selected="false"
+          >
+            About
+          </a>
+
+          <a
+            href="#now"
+            data-tab="now"
+            role="tab"
+            aria-selected="false"
+          >
+            Now
+          </a>
+        </nav>
+      </section>
+
+      <section
+        class="feed tab-panel active"
+        id="feed"
+        role="tabpanel"
+      >
+        <div class="feed-header">
+          <div>
+            <span class="eyebrow">Latest posts</span>
+            <h2>Feed</h2>
+          </div>
+        </div>
+
+        <div
+          class="timeline"
+          id="post-feed"
+          aria-live="polite"
+        ></div>
+
+        <nav
+          class="page-navigation"
+          aria-label="Blog pagination"
+        >
+          <a
+            class="page-arrow page-previous"
+            href="#"
+            aria-label="Previous page"
+          >
+            ‹
+          </a>
+
+          <span class="page-status">Page 1 of 1</span>
+
+          <a
+            class="page-arrow page-next"
+            href="#"
+            aria-label="Next page"
+          >
+            ›
+          </a>
+        </nav>
+      </section>
+
+      <section
+        class="content-section tab-panel"
+        id="projects"
+        role="tabpanel"
+      >
+        <header class="section-intro">
+          <span class="eyebrow">Things I've made</span>
+
+          <h2>Projects</h2>
+
+          <p>
+            A collection of coursework, experiments and write-ups.
+            Keep each project focused on what you made, why you made it
+            and what you learned.
+          </p>
+        </header>
+
+        <div class="project-grid">
+          <a
+            class="project-card"
+            href="posts/static-malware-analysis.html"
+          >
+            <div>
+              <h3>Static Malware Analysis</h3>
+
+              <p>
+                Examining a suspicious PE file using hashes, strings,
+                headers, imports and sections.
+              </p>
+
+              <div class="project-tags">
+                <span>Malware</span>
+                <span>PEStudio</span>
+                <span>DFIR</span>
+              </div>
+            </div>
+
+            <span class="project-card-arrow">↗</span>
+          </a>
+
+          <a
+            class="project-card"
+            href="posts/wireshark-traffic.html"
+          >
+            <div>
+              <h3>Wireshark Traffic Analysis</h3>
+
+              <p>
+                Comparing ordinary network behaviour with patterns
+                that deserve further investigation.
+              </p>
+
+              <div class="project-tags">
+                <span>Wireshark</span>
+                <span>Networking</span>
+                <span>Analysis</span>
+              </div>
+            </div>
+
+            <span class="project-card-arrow">↗</span>
+          </a>
+
+          <a
+            class="project-card"
+            href="posts/phishing-lab.html"
+          >
+            <div>
+              <h3>Phishing & SMTP Lab</h3>
+
+              <p>
+                A controlled lab for studying spoofed email,
+                message headers and SMTP traffic.
+              </p>
+
+              <div class="project-tags">
+                <span>SMTP</span>
+                <span>Phishing</span>
+                <span>MailHog</span>
+              </div>
+            </div>
+
+            <span class="project-card-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="content-section tab-panel"
+        id="about"
+        role="tabpanel"
+      >
+        <header class="section-intro">
+          <span class="eyebrow">A little more context</span>
+
+          <h2>About</h2>
+
+          <p>
+            This section can be more personal than your résumé.
+            Explain where you come from, what interests you and what
+            kind of work you hope to grow into.
+          </p>
+        </header>
+
+        <div class="about-layout">
+          <article class="about-card">
+            <h3>Hi, I'm Vilde.</h3>
+
+            <p>
+              I'm a cybersecurity student from Norway with a background
+              in IT support. I'm still exploring different areas of
+              security, but I keep coming back to analysis, digital
+              forensics and understanding how things work beneath
+              the surface.
+            </p>
+
+            <p>
+              I created this site to document projects, collect notes
+              and share the things I learn along the way—preferably
+              with more detail than strictly necessary.
+            </p>
+
+            <p>
+              Away from the terminal, I like horror films, vintage
+              aesthetics, books and spending a completely reasonable
+              amount of time at home.
+            </p>
+          </article>
+
+          <aside class="about-card">
+            <h3>Currently interested in</h3>
+
+            <div class="about-chips">
+              <span class="about-chip">Digital forensics</span>
+              <span class="about-chip">Threat intelligence</span>
+              <span class="about-chip">Malware analysis</span>
+              <span class="about-chip">Linux</span>
+              <span class="about-chip">Python</span>
+              <span class="about-chip">Documentation</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="content-section tab-panel"
+        id="now"
+        role="tabpanel"
+      >
+        <header class="section-intro">
+          <span class="eyebrow">What I'm doing lately</span>
+
+          <h2>Now</h2>
+
+          <p>
+            A simple snapshot of what you are currently learning,
+            building, reading and watching. Update it whenever something
+            meaningful changes.
+          </p>
+        </header>
+
+        <div class="now-grid">
+          <article class="now-card">
+            <span class="now-label">Learning</span>
+
+            <h3>Cybersecurity foundations</h3>
+
+            <p>
+              Malware analysis, networking, Python automation and
+              digital forensics basics.
+            </p>
+          </article>
+
+          <article class="now-card">
+            <span class="now-label">Building</span>
+
+            <h3>This website</h3>
+
+            <p>
+              Turning a GitHub Pages site into a personal blog,
+              project archive and online profile.
+            </p>
+          </article>
+
+          <article class="now-card">
+            <span class="now-label">Reading</span>
+
+            <h3>Add your current book here</h3>
+
+            <p>
+              Write one sentence about the book, or use this card
+              for a favourite quote.
+            </p>
+          </article>
+
+          <article class="now-card">
+            <span class="now-label">Watching</span>
+
+            <h3>Add your latest film or series</h3>
+
+            <p>
+              This is where the horror personality can show up without
+              changing the design of the entire site.
+            </p>
+          </article>
+        </div>
+
+        <p class="now-updated">
+          Last updated: August 2026
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © 2026 Vilde.
+    </footer>
+
+    <div
+      class="links-modal"
+      aria-hidden="true"
     >
-      <div class="links-modal-header">
-        <div>
-          <span class="eyebrow">Find me online</span>
-          <h2 id="links-modal-title">Links</h2>
+      <div class="links-modal-backdrop"></div>
+
+      <section
+        class="links-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="links-modal-title"
+      >
+        <div class="links-modal-header">
+          <div>
+            <span class="eyebrow">Find me online</span>
+            <h2 id="links-modal-title">Links</h2>
+          </div>
+
+          <button
+            class="links-modal-close"
+            type="button"
+            aria-label="Close links"
+          >
+            ×
+          </button>
         </div>
 
-        <button
-          class="links-modal-close"
-          type="button"
-          aria-label="Close links"
-        >
-          ×
-        </button>
-      </div>
+        <div class="links-list">
+          <a
+            class="links-item"
+            href="https://github.com/vildenumme"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>
+              <strong>GitHub</strong>
+              <small>Projects, code and experiments</small>
+            </span>
 
-      <div class="links-list">
-        <a
-          class="links-item"
-          href="https://github.com/vildenumme"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>
-            <strong>GitHub</strong>
-            <small>Projects, code and experiments</small>
-          </span>
-          <span aria-hidden="true">↗</span>
-        </a>
+            <span aria-hidden="true">↗</span>
+          </a>
 
-        <a
-          class="links-item"
-          href="https://www.linkedin.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>
-            <strong>LinkedIn</strong>
-            <small>Cybersecurity, studies and work</small>
-          </span>
-          <span aria-hidden="true">↗</span>
-        </a>
+          <a
+            class="links-item"
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>
+              <strong>LinkedIn</strong>
+              <small>Cybersecurity, studies and work</small>
+            </span>
 
-        <a class="links-item" href="mailto:your-email@example.com">
-          <span>
-            <strong>Email</strong>
-            <small>Get in touch</small>
-          </span>
-          <span aria-hidden="true">↗</span>
-        </a>
+            <span aria-hidden="true">↗</span>
+          </a>
 
-        <a class="links-item links-blog-link" href="#feed">
-          <span>
-            <strong>Blog</strong>
-            <small>Notes, projects and write-ups</small>
-          </span>
-          <span aria-hidden="true">↓</span>
-        </a>
-      </div>
-    </section>
-  </div>
+          <a
+            class="links-item"
+            href="mailto:your-email@example.com"
+          >
+            <span>
+              <strong>Email</strong>
+              <small>Get in touch</small>
+            </span>
 
-  <script src="js/posts.js"></script>
-  <script src="js/feed.js"></script>
-  <script src="js/main.js"></script>
-</body>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="links-item links-blog-link"
+            href="#feed"
+          >
+            <span>
+              <strong>Blog</strong>
+              <small>Notes, projects and write-ups</small>
+            </span>
+
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/posts.js"></script>
+    <script src="js/feed.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

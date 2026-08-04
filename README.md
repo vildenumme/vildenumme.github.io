@@ -1,33 +1,16 @@
-# Vilde Blog Platform
+# Vilde blog — updated tabs
 
-## What changed
-- Only one feed page is needed: `index.html`.
-- Blog posts are stored in `js/posts.js`.
-- JavaScript automatically shows 3 posts per page.
-- Pagination uses URLs such as `index.html?page=2`.
-- The first page hides the previous arrow.
-- The final page hides the next arrow.
-- The middle only shows `Side X av Y`.
+This version uses your supplied HTML, JavaScript and CSS as the base.
 
-## Add another post
-1. Create the article file inside `posts/`.
-2. Add one new object to the bottom of `js/posts.js`.
-3. Keep newest posts at the top of the list.
+Navigation:
+- Feed
+- Projects
+- About
+- Now
 
-The total number of pages is calculated automatically.
-
-
-## Visual reactions
-- Clicking the heart changes `♡` to `♥` and increases the displayed number by 1.
-- Clicking again removes the visual like and restores the original number.
-- Repost works the same way.
-- Share opens the native share menu where supported, otherwise it copies the article link.
-- Reactions are visual only and reset when the page reloads.
-
-
-## Links modal
-The `/links` button opens a modal with GitHub, LinkedIn, email, and blog links.
-
-Before publishing:
-- Replace the LinkedIn URL.
-- Replace `your-email@example.com` with your actual email address.
+Editing ideas:
+- Projects: explain what you made, tools used, and what you learned.
+- About: keep it more personal than LinkedIn.
+- Now: update Learning, Building, Reading and Watching whenever something changes.
+- Replace the LinkedIn URL and email address in index.html.
+- Add your profile image as images/profile.jpg.

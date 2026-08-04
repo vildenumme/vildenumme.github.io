@@ -3,47 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A controlled look at SMTP, spoofing, headers, and packet captures." />
+  <meta name="description" content="Building a Safe Phishing Lab" />
   <title>Building a Safe Phishing Lab | Vilde</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="corner-logo" href="../index.html" aria-label="Home">◉</a>
-    <button class="theme-button" type="button" aria-label="Switch theme" title="Switch theme"><span>☀</span></button>
-  </header>
   <main class="article-shell">
     <article class="article-card">
-      <div class="article-cover"><img src="../images/setup-cover.jpg" alt="Purple-lit desk setup" /></div>
+      <div class="article-cover">
+        <img src="../images/setup-cover.jpg" alt="" />
+      </div>
+
       <div class="article-content">
-        <a class="back-link" href="../page-2.html#feed">← Back to feed</a>
-        <div class="article-author">
-          <img src="../images/profile.jpg" alt="" />
-          <div><strong>Vilde</strong><br><span>@vildenumme · Jun 18, 2026</span></div>
-        </div>
+        <a class="back-link" href="../index.html#feed">
+          ← Back to feed
+        </a>
+
         <h1>Building a Safe Phishing Lab</h1>
-        <p class="article-deck">A controlled look at SMTP, spoofing, headers, and packet captures.</p>
-        <div class="article-meta"><span>Jun 18, 2026</span><span>7 min read</span><span>Email security</span></div>
+
+        <p class="article-deck">
+          Replace this with the finished introduction to your article.
+        </p>
+
         <div class="article-body">
-          <p>This lab was built to understand how spoofed email appears at different stages—from the SMTP conversation to the final message headers.</p>
-          <h2>Keeping the lab controlled</h2>
-          <p>The entire setup stayed inside a local environment. The goal was analysis and learning, not delivering messages to real recipients.</p>
-          <div class="code-block"><button class="copy-code" type="button">Copy</button><pre><code>MAIL FROM:&lt;spoofed@example.com&gt;
-RCPT TO:&lt;student@lab.local&gt;
-DATA</code></pre></div>
-          <h2>What I looked for</h2>
-          <p>I compared visible sender information with the underlying headers and captured the SMTP traffic in Wireshark.</p>
-        </div>
-        <div class="article-tags"><span>Phishing</span><span>SMTP</span><span>Wireshark</span></div>
-        <div class="article-actions">
-          <button class="action-button share-page" type="button">Share article</button>
-          <a class="action-button" href="../page-2.html#feed">Back to feed</a>
+          <p>
+            This is a ready-to-edit article page. Add headings,
+            paragraphs, screenshots and code blocks here.
+          </p>
         </div>
       </div>
     </article>
   </main>
-  <footer class="site-footer">© 2026 Vilde.</footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>
