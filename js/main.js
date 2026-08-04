@@ -84,3 +84,45 @@ lightbox?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") lightbox?.classList.remove("open");
 });
+
+
+const linksTrigger = document.querySelector(".links-trigger");
+const linksModal = document.querySelector(".links-modal");
+const linksModalClose = document.querySelector(".links-modal-close");
+const linksModalBackdrop = document.querySelector(".links-modal-backdrop");
+const linksBlogLink = document.querySelector(".links-blog-link");
+
+function openLinksModal() {
+  if (!linksModal) return;
+
+  linksModal.classList.add("open");
+  linksModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  linksModalClose?.focus();
+}
+
+function closeLinksModal({ restoreFocus = true } = {}) {
+  if (!linksModal) return;
+
+  linksModal.classList.remove("open");
+  linksModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+
+  if (restoreFocus) {
+    linksTrigger?.focus();
+  }
+}
+
+linksTrigger?.addEventListener("click", openLinksModal);
+linksModalClose?.addEventListener("click", () => closeLinksModal());
+linksModalBackdrop?.addEventListener("click", () => closeLinksModal());
+
+linksBlogLink?.addEventListener("click", () => {
+  closeLinksModal({ restoreFocus: false });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && linksModal?.classList.contains("open")) {
+    closeLinksModal();
+  }
+});

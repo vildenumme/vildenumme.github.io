@@ -23,3 +23,11 @@ The total number of pages is calculated automatically.
 - Repost works the same way.
 - Share opens the native share menu where supported, otherwise it copies the article link.
 - Reactions are visual only and reset when the page reloads.
+
+
+## Links modal
+The `/links` button opens a modal with GitHub, LinkedIn, email, and blog links.
+
+Before publishing:
+- Replace the LinkedIn URL.
+- Replace `your-email@example.com` with your actual email address.
