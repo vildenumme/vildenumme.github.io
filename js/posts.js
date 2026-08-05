@@ -24,19 +24,19 @@ window.blogPosts = [
     previewHtml: "TCP 443<br>192.168.1.10<br>ESTABLISHED",
     likes: 18,
     reposts: 5,
-  },
+  },*/
   {
     shortDate: "Jul 8",
     intro:
-      "Linux lesson of the week: breaking something is often the fastest way to understand how it works.",
+      "It’s kind of wild to realize that almost everything we do online today runs on protocols created over 40 years ago, protocols that were never actually built with security in mind.",
     href: "posts/linux-lessons.html",
-    title: "Things I Learned from Breaking Linux",
-    description: "Notes from mistakes, fixes, and terminal experiments.",
+    title: "TCP and UDP Were Never Designed to Be Secure",
+    description: "The story behind TCP, UDP, TLS, and why security came later.",
     previewClass: "preview-linux",
     previewHtml: "$ whoami<br>vilde<br>$ uname -a",
     likes: 9,
     reposts: 2,
-  },*/
+  },
   {
     shortDate: "Jun 18",
     intro:

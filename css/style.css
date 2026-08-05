@@ -459,8 +459,15 @@ a:focus-visible {
 
 .feed-preview:hover {
   transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
-  box-shadow: 0 12px 34px rgba(47, 30, 76, 0.08);
+  border-color: var(--line);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  background: color-mix(in srgb, var(--surface) 92%, white 8%);
+}
+
+:root[data-theme="dark"] .feed-preview:hover {
+  background: color-mix(in srgb, var(--surface) 92%, white 4%);
+  border-color: #3d3d3d;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .feed-preview-image {

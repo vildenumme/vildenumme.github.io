@@ -20,17 +20,69 @@
           ← Back to feed
         </a>
 
-        <h1>Things I Learned from Breaking Linux</h1>
+        <article>
+  <h1>TCP and UDP Were Never Designed to Be Secure</h1>
 
-        <p class="article-deck">
-          Replace this with the finished introduction to your article.
-        </p>
+  <p class="article-deck">
+A few months ago I took my Information Security exam, and one of the questions was:
+<em>"Explain the security challenges at the transport layer in the TCP/IP model."</em>
+</p>
 
-        <div class="article-body">
-          <p>
-            This is a ready-to-edit article page. Add headings,
-            paragraphs, screenshots and code blocks here.
-          </p>
+<p>
+That question sent me down a rabbit hole. Instead of just revising TCP, UDP and TLS, I became curious about why these protocols were designed the way they were in the first place.
+</p>
+
+<p>
+Once I started looking into their history, a lot of things suddenly made much more sense. It turns out the Internet we use today is still built on ideas from a very different world.
+</p>
+
+<p>
+I thought it was too interesting not to write about, so here's a short journey through the history of TCP, UDP and why transport-layer security looks the way it does today.
+</p>
+
+  <h2>The "Wild West" where everyone just trusted each other</h2>
+
+  <p>When Vint Cerf and Bob Kahn were sketching out the foundation for TCP back in 1974 (and when RFC 793 officially dropped in 1981), the internet was not the chaotic place it is today. Back then, it was just ARPANET, basically a tiny, closed group of university researchers, professors, and military engineers.</p>
+
+  <p>Because everyone on the network was an identifiable academic, the entire design was built on 100% mutual trust. Nobody built encryption or authentication into TCP or UDP because nobody expected someone on the network to actively eavesdrop or hijack sessions. If you wanted to stop someone from messing with your data, you simply locked the physical door to the computer lab.</p>
+
+  <p>Plus, hardware back then was painfully slow. Adding heavy encryption overhead to every packet would have crawled the entire network to a halt. TCP was built for reliability (making sure packets arrived in order), UDP was built for raw speed, and security was left as a problem for the future. Fast forward to the 1990s, and we were sending plain text HTTP over an open global web.</p>
+
+  <h2>When Netscape realized we had a problem</h2>
+
+  <p>Once the World Wide Web exploded in the 90s and everyday people started jumping online, sending plain text across public routers obviously became a disaster waiting to happen. Anyone with basic tools could sniff sensitive data right off the wire.</p>
+
+  <p>Netscape tried fixing this in 1995 with SSL 2.0. It was kind of a mess and full of security holes, so they quickly redesigned it as SSL 3.0 in 1996. Eventually, the IETF took over, renamed it TLS (Transport Layer Security) 1.0 in 1999 to make it an open standard, and that is what evolved into the TLS 1.3 we use today (or DTLS for UDP).</p>
+
+  <p>Whenever you see that little padlock in your address bar, TLS is doing three main things behind the scenes:</p>
+  <ul>
+    <li><strong>Cipher Suites:</strong> Agreeing on how to encrypt the data.</li>
+    <li><strong>Key Exchange:</strong> Secretly exchanging encryption keys so nobody in the middle can read the payload.</li>
+    <li><strong>Authentication:</strong> Using digital certificates so your browser knows it is actually talking to your bank and not an attacker pretending to be them.</li>
+  </ul>
+
+  <h2>Attacks that don't care about encryption</h2>
+
+  <p>But... Even if you encrypt the payload using TLS, an attacker can still abuse the fundamental mechanics of TCP itself. They don't need to read your data if they can just crash your server or hijack your connection.</p>
+
+  <p>A few classic examples I had to write about:</p>
+  <ul>
+    <li><strong>SYN Floods:</strong> TCP uses a three-way handshake to connect (SYN &rarr; SYN/ACK &rarr; ACK). In a SYN flood, an attacker sends a wall of SYN packets with fake return IP addresses. The server responds with SYN/ACK and holds open a slot in memory waiting for the final ACK. But because the sender IP was fake, the final ACK never comes. The server just sits there holding open thousands of "half-open" connections until it runs out of memory and crashes. <em>(SYN cookies are usually used to fight this now so the server doesn't reserve memory upfront).</em></li>
+    <li><strong>Optimistic ACK Attacks:</strong> TCP tries to be smart about speed, if the network is clear, it speeds up data transfer. In an optimistic ACK attack, a client sends ACK receipts <em>before</em> it even receives the packets. This tricks the server into thinking "wow, this network is lightning fast!" and it starts blasting data at max speed, totally overwhelming intermediate routers.</li>
+    <li><strong>Session Hijacking:</strong> If an attacker can guess or steal your TCP sequence numbers (or session cookies), they can step right into the middle of an established connection. The server thinks it is still talking to you, so the attacker can perform actions in your account without ever needing your password.</li>
+    <li><strong>Port Scanning:</strong> Before doing any of this, attackers run tools like Nmap to probe ports and see what's open. A good firewall uses stateful inspection, it basically drops any inbound packet that was not explicitly requested by someone inside the network, making the machine look like a ghost to scanners.</li>
+  </ul>
+
+  <h2>Final thoughts</h2>
+
+<p>
+One thing that really surprised me was how much of today's Internet still depends on ideas that were designed in a completely different era. TCP and UDP were built for a small network where people trusted each other.
+</p>
+
+<p>
+It was really fun to learn about why these protocols work the way they do. 
+</p>
+</article>
         </div>
       </div>
     </article>
