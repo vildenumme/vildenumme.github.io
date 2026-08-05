@@ -1,41 +1,376 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Building a Safe Phishing Lab" />
-  <title>Building a Safe Phishing Lab | Vilde</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
-<body>
-  <main class="article-shell">
-    <article class="article-card">
-      <div class="article-cover">
-        <img src="../images/setup-cover.jpg" alt="" />
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Building a Safe Phishing Lab" />
 
-      <div class="article-content">
-        <a class="back-link" href="../index.html#feed">
-          ← Back to feed
-        </a>
+    <title>The History of Cryptography</title>
 
-        <h1>Building a Safe Phishing Lab</h1>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.5/index.css"
+    />
 
-        <p class="article-deck">
-          Replace this with the finished introduction to your article.
-        </p>
+    <link rel="stylesheet" href="../css/style.css" />
 
-        <div class="article-body">
-          <p>
-            This is a ready-to-edit article page. Add headings,
-            paragraphs, screenshots and code blocks here.
-          </p>
+    <!-- Prism syntax highlighting -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+  </head>
+  <body>
+    <main class="article-shell">
+      <article class="article-card">
+        <div class="article-cover">
+          <img src="../images/setup-cover.jpg" alt="" />
         </div>
-      </div>
-    </article>
-  </main>
 
-  <script src="../js/main.js"></script>
-</body>
+        <div class="article-content">
+          <a class="back-link" href="../index.html#feed"> ← Back to feed </a>
+
+          <h1>The History of Cryptography</h1>
+
+          <p>
+            Earlier this week, my teacher told a story about a Greek ruler named
+            Histiaeus. He shaved a trusted slave's head, pricked a secret
+            message into the scalp, waited for the hair to grow back, and only
+            then sent him on his way.
+          </p>
+
+          <p>
+            When the slave reached Aristagoras, the ruler of Miletus, the
+            instructions were simple: shave his head again and read what was
+            hidden underneath.
+          </p>
+
+          <p>
+            I didn't expect a lesson about encryption to make me curious about
+            ancient history, but it did. It also made me wonder about a much
+            bigger question:
+            <em
+              >if people were willing to go to those lengths to send a secret
+              message, what else have humans done to protect information?</em
+            >
+          </p>
+
+          <p>
+            That curiosity is what led me to pick up
+            <em>The Code Book</em> by Simon Singh.
+          </p>
+
+          <div class="article-body">
+            <section>
+              <h2>Cryptography In Plain Terms</h2>
+
+              <p>So... what even is cryptography?</p>
+
+              <p>
+                At its core, cryptography is how we protect information by
+                transforming it, so only the right person can understand it. You
+                start with
+                <strong>plaintext</strong> (normal text) and turn it into
+                <strong>ciphertext</strong> (encrypted text).
+              </p>
+
+              <p>
+                Historically, most ciphers are built from two basic techniques:
+              </p>
+
+              <h4>Substitution</h4>
+
+              <p>Replacing symbols with other symbols.</p>
+
+              <p>
+                That can be as simple as shifting letters (like the Caesar
+                cipher), or as complex as swapping whole chunks of text using a
+                rule only the sender and receiver know.
+              </p>
+
+              <h4>Transposition</h4>
+
+              <p>Keeping the same symbols, but changing their order.</p>
+
+              <p>
+                The letters don't change, but the message becomes unreadable
+                because the structure is scrambled.
+              </p>
+
+              <p>
+                Many real ciphers mix both ideas because patterns are the enemy.
+                Once codebreakers learn what to look for, a cipher can go from
+                mysterious to obvious surprisingly fast.
+              </p>
+
+              <p>
+                The shaved-head story is different—that isn't cryptography, it's
+                <strong>steganography</strong>: hiding the existence of a
+                message in the first place. The goal isn't to make the message
+                unreadable, but to make it unnoticed.
+              </p>
+
+              <p>
+                And that's what makes the history of secret communication so
+                fascinating: humans have always mixed creativity, psychology and
+                technology to outsmart whoever might be watching.
+              </p>
+            </section>
+
+            <section>
+              <h2>Stories From the History of Secrecy</h2>
+
+              <p>
+                Steganography didn't stop with shaved heads. In
+                <em>The Code Book</em>, Singh mentions several creative ways
+                people tried to hide messages.
+              </p>
+
+              <p>
+                One example comes from ancient China: a message written on a
+                tiny piece of silk, rolled into a small ball, sealed in wax, and
+                swallowed by a messenger to pass guards unnoticed.
+              </p>
+
+              <p>
+                Another method involved writing directly onto the wooden base of
+                a wax tablet before covering it with fresh wax. To anyone else,
+                the tablet looked completely blank until the recipient knew to
+                scrape the wax away.
+              </p>
+
+              <p>
+                But hiding a message only works until people start searching.
+                After that, the focus shifted from hiding messages to encrypting
+                them.
+              </p>
+
+              <p>
+                Simple substitution ciphers, such as the Caesar cipher, were
+                easy to use but also vulnerable. Once codebreakers learned to
+                analyse patterns in language, many supposedly secret messages
+                were no longer secret.
+              </p>
+
+              <p>
+                This eventually led to more advanced systems like the
+                <strong>Vigenère cipher</strong>. Instead of using one alphabet
+                shift, it used many, making it appear unbreakable for
+                centuries... until someone finally figured it out.
+              </p>
+            </section>
+
+            <section>
+              <h2>Machines Change Everything: Enigma</h2>
+
+              <p>
+                During World War II, Nazi Germany relied on the
+                <strong>Enigma machine</strong> to encrypt military
+                communications. Enigma transformed cryptography from something
+                done with pencil and paper into something that could operate
+                continuously on a massive scale.
+              </p>
+
+              <p>
+                Instead of using one fixed substitution, Enigma relied on
+                rotating
+                <strong>rotors</strong> that constantly changed the substitution
+                while you typed. This meant the same letter could encrypt
+                differently every time, making simple pattern analysis much more
+                difficult.
+              </p>
+
+              <p>
+                But one of Singh's biggest lessons is that
+                <strong>"hard to break" doesn't mean "unbreakable."</strong>
+              </p>
+
+              <p>
+                Enigma wasn't defeated by one brilliant discovery. It was broken
+                through a combination of mathematics, engineering, captured
+                intelligence and human mistakes. When thousands of messages are
+                sent every day, predictable habits become weaknesses.
+              </p>
+            </section>
+
+            <div class="article-note">
+              <strong>Interesting fact</strong>
+              <p>
+                The Enigma machine had an enormous number of possible settings,
+                but human habits, not just mathematics, played a major role in
+                its eventual defeat.
+              </p>
+            </div>
+
+            <section>
+              <h2>The Math Era: Sharing Secrets Without Meeting</h2>
+
+              <p>
+                After World War II, cryptography gradually shifted from
+                mechanical machines to mathematics.
+              </p>
+
+              <p>
+                One of the most revolutionary ideas introduced in the book is
+                <strong>public-key cryptography</strong>.
+              </p>
+
+              <p>
+                The concept sounds strange at first: you can publish one key for
+                everyone to use while keeping another key completely private.
+                The public key locks the information, but only the private key
+                can unlock it.
+              </p>
+
+              <p>
+                This solved one of cryptography's biggest problems: securely
+                communicating with someone you've never met before.
+              </p>
+
+              <p>
+                This principle became the foundation of systems like
+                <strong>RSA</strong> and later <strong>PGP</strong>, bringing
+                strong encryption from governments and militaries to ordinary
+                people.
+              </p>
+            </section>
+
+            <section>
+              <h2>Where We Are Now (And What's Next)</h2>
+
+              <p>
+                Today, encryption is everywhere. Every time you log in, pay
+                online or send a private message, cryptography is quietly
+                working behind the scenes.
+              </p>
+
+              <p>
+                Modern systems usually combine multiple approaches. Public-key
+                cryptography establishes trust and securely exchanges keys,
+                while fast symmetric encryption protects the actual data.
+              </p>
+
+              <p>
+                Singh also looks toward the future. If large-scale quantum
+                computers become practical, they could threaten some of today's
+                public-key algorithms. That's why researchers are already
+                developing and standardising
+                <strong>post-quantum cryptography</strong>.
+              </p>
+            </section>
+
+            <section>
+              <h2>Final Thoughts</h2>
+
+              <p>
+                If you enjoy clever historical stories and want to understand
+                the ideas behind encryption in a way that's both approachable
+                and memorable, I highly recommend <em>The Code Book</em>.
+              </p>
+
+              <p>
+                Oh, and if you want a quick feel for what a cipher actually
+                does, try the examples below. The code demonstrates how the text
+                <strong>"HELLO WORLD"</strong> can be encrypted using three
+                famous historical ciphers.
+              </p>
+              <div class="code-block">
+                <button class="copy-code" type="button">Copy</button>
+
+                <pre><code class="language-python">
+import string
+
+def caesar_cipher(plaintext, shift):
+    alphabet = string.ascii_uppercase
+    ciphertext = ""
+    for char in plaintext:
+        if char in alphabet:
+            index = (alphabet.index(char) + shift) % 26
+            ciphertext += alphabet[index]
+        else:
+            ciphertext += char
+    return ciphertext
+
+def vigenere_cipher(plaintext, key):
+    alphabet = string.ascii_uppercase
+    key = key.upper()
+    key_len = len(key)
+    key_pos = 0
+    ciphertext = ""
+    for char in plaintext:
+        if char in alphabet:
+            shift = alphabet.index(key[key_pos]) % 26
+            index = (alphabet.index(char) + shift) % 26
+            ciphertext += alphabet[index]
+            key_pos = (key_pos + 1) % key_len
+        else:
+            ciphertext += char
+    return ciphertext
+
+def playfair_cipher(plaintext, key):
+    alphabet = string.ascii_uppercase.replace("J", "")
+    key = key.upper().replace("J", "I")
+    grid = ""
+    for char in key + alphabet:
+        if char not in grid:
+            grid += char
+    
+    ciphertext = ""
+    plaintext = plaintext.upper().replace(" ", "").replace("J", "I")
+    
+    # Prepare plaintext in pairs
+    i = 0
+    prepared_text = ""
+    while i < len(plaintext):
+        a = plaintext[i]
+        b = plaintext[i+1] if (i+1) < len(plaintext) else 'X'
+        if a == b:
+            prepared_text += a + 'X'
+            i += 1
+        else:
+            prepared_text += a + b
+            i += 2
+    if len(prepared_text) % 2 != 0:
+        prepared_text += 'X'
+
+    for i in range(0, len(prepared_text), 2):
+        char1, char2 = prepared_text[i], prepared_text[i+1]
+        row1, col1 = divmod(grid.index(char1), 5)
+        row2, col2 = divmod(grid.index(char2), 5)
+        
+        if row1 == row2:
+            ciphertext += grid[row1 * 5 + (col1 + 1) % 5]
+            ciphertext += grid[row2 * 5 + (col2 + 1) % 5]
+        elif col1 == col2:
+            ciphertext += grid[((row1 + 1) % 5) * 5 + col1]
+            ciphertext += grid[((row2 + 1) % 5) * 5 + col2]
+        else:
+            ciphertext += grid[row1 * 5 + col2]
+            ciphertext += grid[row2 * 5 + col1]
+    return ciphertext
+
+# Example usage:
+plaintext = "HELLO WORLD"
+shift = 3
+key = "CRYPTO"
+playfair_key = "KEYWORD"
+
+print("Caesar ciphertext:", caesar_cipher(plaintext, shift))
+print("Vigenere ciphertext:", vigenere_cipher(plaintext, key))
+print("Playfair ciphertext:", playfair_cipher(plaintext, playfair_key))
+  </code></pre>
+              </div>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
 </html>
+<script src="../js/main.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
