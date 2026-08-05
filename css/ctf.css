@@ -1,0 +1,500 @@
+/* CTF article styles — scoped so the rest of the site is unaffected. */
+.ctf-page {
+  --ctf-bg: var(--background);
+  --ctf-panel: var(--surface);
+  --ctf-panel-soft: var(--surface-soft);
+  --ctf-text: var(--text);
+  --ctf-body: var(--body-text);
+  --ctf-muted: var(--muted);
+  --ctf-border: var(--line);
+  --ctf-purple: var(--accent);
+  --ctf-purple-hover: var(--accent-hover);
+  --ctf-terminal: var(--terminal);
+  --ctf-terminal-text: var(--terminal-text);
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ctf-text);
+  background: var(--ctf-bg);
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.72;
+}
+.ctf-page *,
+.ctf-page *::before,
+.ctf-page *::after {
+  box-sizing: border-box;
+}
+.ctf-page a {
+  color: inherit;
+}
+.ctf-page button {
+  font: inherit;
+}
+.ctf-page code {
+  font-family: "Geist Mono", monospace;
+}
+.ctf-skip {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 99;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: var(--ctf-purple);
+  transform: translateY(-180%);
+}
+.ctf-skip:focus {
+  transform: none;
+}
+.ctf-container {
+  width: min(1040px, calc(100% - 2rem));
+  margin: auto;
+  padding: 2rem 0 4rem;
+}
+.ctf-breadcrumb {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--ctf-muted);
+  font-size: 0.78rem;
+}
+.ctf-breadcrumb a {
+  text-decoration: none;
+}
+.ctf-breadcrumb a:hover {
+  color: var(--ctf-purple);
+}
+.ctf-header {
+  max-width: 720px;
+  padding: 5.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--ctf-border);
+}
+.ctf-label {
+  margin: 0 0 0.8rem;
+  color: var(--ctf-purple);
+  font:
+    600 0.72rem/1.4 "Geist Mono",
+    monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ctf-header h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+.ctf-lead {
+  max-width: 650px;
+  margin: 1.3rem 0 0;
+  color: var(--ctf-body);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+.ctf-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.6rem;
+  color: var(--ctf-muted);
+  font-size: 0.76rem;
+}
+.ctf-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 190px;
+  gap: 70px;
+  align-items: start;
+  padding-top: 3rem;
+}
+.ctf-content > section {
+  padding-top: 2.6rem;
+  scroll-margin-top: 1rem;
+}
+.ctf-content > section:first-of-type {
+  padding-top: 3rem;
+}
+.ctf-content h2 {
+  margin: 0 0 1rem;
+  color: var(--ctf-text);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+.ctf-content h2 span {
+  color: var(--ctf-purple);
+  font-family: "Geist Mono", monospace;
+  font-size: 0.9em;
+}
+.ctf-content p {
+  margin: 0 0 1rem;
+  color: var(--ctf-body);
+}
+.ctf-content strong {
+  color: var(--ctf-text);
+}
+.ctf-content ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--ctf-body);
+}
+.ctf-content li {
+  margin: 0.25rem 0;
+}
+.ctf-content li::marker {
+  color: var(--ctf-purple);
+}
+.ctf-note {
+  margin: 1.1rem 0 0;
+  padding: 0.9rem 1rem;
+  border-left: 2px solid var(--ctf-purple);
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: color-mix(in srgb, var(--ctf-purple) 7%, var(--ctf-panel));
+}
+.ctf-note strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.82rem;
+}
+.ctf-note p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+.ctf-note-intro {
+  margin: 0;
+  padding: 1.15rem 1.25rem;
+}
+.ctf-note-intro strong {
+  color: var(--ctf-purple);
+}
+.ctf-checklist {
+  margin-top: 1.25rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.45rem;
+  background: var(--ctf-panel-soft);
+}
+.ctf-checklist p {
+  margin: 0;
+}
+.ctf-tool {
+  margin-top: 1rem;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.45rem;
+  background: var(--ctf-panel);
+}
+.ctf-tool + .ctf-tool {
+  margin-top: 0.8rem;
+}
+.ctf-tool-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ctf-border);
+}
+.ctf-tool h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+.ctf-tool-type {
+  margin: 0.1rem 0 0 !important;
+  color: var(--ctf-muted);
+  font:
+    0.68rem/1.5 "Geist Mono",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.ctf-tool-head a {
+  flex: none;
+  color: var(--ctf-purple);
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+.ctf-tool-head a:hover {
+  text-decoration: underline;
+}
+.ctf-tool > p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+.ctf-tool > p:last-child {
+  margin-bottom: 0;
+}
+.ctf-tool > ul {
+  font-size: 0.82rem;
+}
+.ctf-tool code:not(.ctf-code code) {
+  padding: 0.08rem 0.25rem;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.2rem;
+  background: var(--ctf-panel-soft);
+}
+.ctf-code {
+  margin: 1rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.4rem;
+  background: var(--ctf-terminal);
+}
+.ctf-content > .ctf-code,
+.ctf-content section > .ctf-code {
+  margin: 1.2rem 0;
+}
+.ctf-code > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.45rem 0.35rem 0.8rem;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--ctf-terminal-text) 14%, transparent);
+  color: color-mix(in srgb, var(--ctf-terminal-text) 65%, transparent);
+  background: color-mix(in srgb, var(--ctf-terminal) 92%, white 8%);
+  font:
+    0.68rem "Geist Mono",
+    monospace;
+}
+.ctf-code button {
+  padding: 0.3rem 0.55rem;
+  border: 1px solid
+    color-mix(in srgb, var(--ctf-terminal-text) 18%, transparent);
+  border-radius: 0.25rem;
+  color: var(--ctf-terminal-text);
+  background: color-mix(in srgb, var(--ctf-terminal) 86%, white 14%);
+  cursor: pointer;
+  font-size: 0.67rem;
+}
+.ctf-code button:hover {
+  color: #fff;
+  border-color: var(--ctf-purple);
+}
+.ctf-code code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.85rem 1rem;
+  color: var(--ctf-terminal-text);
+  font-size: 0.77rem;
+  line-height: 1.65;
+  white-space: pre;
+}
+.ctf-tip {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--ctf-purple) 25%, var(--ctf-border));
+  border-radius: 0.4rem;
+  background: color-mix(in srgb, var(--ctf-purple) 5%, var(--ctf-panel-soft));
+}
+.ctf-tip strong {
+  color: var(--ctf-purple);
+  font-size: 0.8rem;
+}
+.ctf-tip p {
+  margin: 0;
+  font-size: 0.82rem;
+}
+.ctf-table-wrap {
+  margin-top: 1.2rem;
+  overflow-x: auto;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.4rem;
+}
+.ctf-page table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.ctf-page th,
+.ctf-page td {
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid var(--ctf-border);
+  text-align: left;
+}
+.ctf-page th {
+  color: var(--ctf-text);
+  background: var(--ctf-panel);
+  font-size: 0.72rem;
+}
+.ctf-page td {
+  color: var(--ctf-body);
+}
+.ctf-page tr:last-child td {
+  border-bottom: 0;
+}
+.ctf-page td a {
+  color: var(--ctf-purple);
+  text-decoration: none;
+}
+.ctf-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+}
+.ctf-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.4rem;
+  background: var(--ctf-panel);
+  text-decoration: none;
+}
+.ctf-links a:hover {
+  border-color: color-mix(in srgb, var(--ctf-purple) 55%, var(--ctf-border));
+}
+.ctf-links span {
+  display: grid;
+}
+.ctf-links strong {
+  font-size: 0.82rem;
+}
+.ctf-links small {
+  color: var(--ctf-muted);
+  font-size: 0.7rem;
+}
+.ctf-links b {
+  color: var(--ctf-purple);
+  font-weight: 400;
+}
+.ctf-ending {
+  margin-top: 3.5rem;
+  padding: 1.35rem !important;
+  border: 1px solid color-mix(in srgb, var(--ctf-purple) 35%, var(--ctf-border));
+  border-radius: 0.5rem;
+  background: var(--ctf-panel);
+}
+.ctf-ending h2 {
+  font-size: 1.2rem;
+}
+.ctf-ending p {
+  font-size: 0.88rem;
+}
+.ctf-ending p:last-child {
+  margin-bottom: 0;
+}
+.ctf-toc {
+  position: sticky;
+  top: 2rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--ctf-border);
+}
+.ctf-toc p {
+  margin: 0 0 0.6rem;
+  color: var(--ctf-text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.ctf-toc a {
+  display: block;
+  padding: 0.22rem 0;
+  color: var(--ctf-muted);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  text-decoration: none;
+}
+.ctf-toc a:hover,
+.ctf-toc a.active {
+  color: var(--ctf-purple);
+}
+.ctf-footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 720px;
+  margin-top: 4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--ctf-border);
+  color: var(--ctf-muted);
+  font-size: 0.75rem;
+}
+.ctf-footer p {
+  margin: 0;
+}
+.ctf-footer a {
+  color: var(--ctf-purple);
+  text-decoration: none;
+}
+.ctf-toast {
+  position: fixed;
+  z-index: 50;
+  left: 50%;
+  bottom: 1.2rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--ctf-border);
+  border-radius: 0.35rem;
+  color: var(--ctf-text);
+  background: var(--ctf-panel);
+  box-shadow: 0 8px 24px #0007;
+  opacity: 0;
+  transform: translate(-50%, 0.6rem);
+  pointer-events: none;
+  transition: 0.2s;
+  font-size: 0.75rem;
+}
+.ctf-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 920px) {
+  .ctf-layout {
+    grid-template-columns: minmax(0, 720px);
+  }
+  .ctf-toc {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .ctf-container {
+    width: min(100% - 1.25rem, 1040px);
+    padding-top: 1.2rem;
+  }
+  .ctf-header {
+    padding: 3.8rem 0 2.5rem;
+  }
+  .ctf-header h1 {
+    font-size: 3rem;
+  }
+  .ctf-layout {
+    padding-top: 2rem;
+  }
+  .ctf-content > section {
+    padding-top: 2.2rem;
+  }
+  .ctf-tool-head {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .ctf-links {
+    grid-template-columns: 1fr;
+  }
+  .ctf-tip {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .ctf-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ctf-page *,
+  .ctf-page *::before,
+  .ctf-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

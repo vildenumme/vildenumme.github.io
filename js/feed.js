@@ -1,4 +1,3 @@
-
 (() => {
   const POSTS_PER_PAGE = 3;
   const feed = document.querySelector("#post-feed");
